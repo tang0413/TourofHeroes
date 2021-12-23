@@ -35,9 +35,9 @@ a {
   align-self: auto;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   a {
-    width: 18%;
+    width: 100%;
     box-sizing: content-box;
   }
 }

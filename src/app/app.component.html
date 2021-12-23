@@ -1,10 +1,12 @@
-<div class="container">
-  <div class="ui card">
-    <h1>{{title}}</h1>
-    <nav>
-      <a routerLink="/dashboard">Dashboard</a>
-      <a routerLink="/heroes">Heroes</a>
-    </nav>
+<div class="ui card">
+  <div class="container">
+    <div class="ui card">
+      <h1>{{title}}</h1>
+      <nav>
+        <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="/heroes">Heroes</a>
+      </nav>
+    </div>
     <router-outlet></router-outlet>
     <app-messages></app-messages>
   </div>

@@ -1,18 +1,19 @@
-<h2>My Heroes</h2>
+<div class="ui card">
+  <h2>My Heroes</h2>
+  <div>
+    <label for="new-hero">Hero name: </label>
+    <input pInputText id="new-hero" #heroName />
+    <button pButton class="add-button" (click)="add(heroName.value); heroName.value=''">
+      Add hero
+    </button>
+  </div>
 
-<div>
-  <label for="new-hero">Hero name: </label>
-  <input pInputText id="new-hero" #heroName />
-  <button pButton class="add-button" (click)="add(heroName.value); heroName.value=''">
-    Add hero
-  </button>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+      <button pButton class="delete" title="delete hero" (click)="delete(hero)">x</button>
+    </li>
+  </ul>
 </div>
-
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
-    <button pButton class="delete" title="delete hero" (click)="delete(hero)">x</button>
-  </li>
-</ul>
